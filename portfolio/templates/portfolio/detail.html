@@ -1,0 +1,12 @@
+<div>
+    <h1>{{ post.title }}</h1>
+    <p>이름 : {{ post.name }}</p>
+    <p>나이 : {{ post.age }}</p>
+    <p>전공 : {{ post.major }}</p>
+    <p>학년 : {{ post.grade }}</p>
+    <p>고향 : {{ post.hometown }}</p>
+
+    <a href="{% url 'home'%}">홈으로</a>
+    <a href="{% url 'edit' post.id %}">수정하기</a>
+    <a href="{% url 'delete' post.id %}">삭제하기</a>
+</div>

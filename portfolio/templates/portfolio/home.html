@@ -1,0 +1,16 @@
+<head>
+    <title> My portfolio </title>
+</head>
+
+<body>
+    <h1>Home</h1>
+    <a href="{% url 'new'%}" class="top-menu">글쓰기</a>
+    {% for Person in Persons.all %}
+        <div class="container">
+            <h2><a href="post/{{Person.id}}/">{{Person.title}}</a></h2>
+            <p>{{Person.created_date}}</p>
+        </div>
+    {% endfor%}
+
+    <!-- {{persons.all}} -->
+</body>
